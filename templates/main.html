@@ -22,7 +22,11 @@
     <div id="Wrap">
         <header>
             <a href="{% url 'main' %}"><img src="{% static 'image/waug_logo.svg'%}" id="whiteLogo"></a>
-            <span id="topMenuBox"><span><a href="{% url 'community:index' %}" style="text-decoration:none;">게시판</a></span><span>한국어 ▽</span><span>KRW 대한민국 원(₩) ▽</span>
+            <span id="topMenuBox">
+                <span>
+                    <a href="{% url 'community:index' %}" style="text-decoration:none;">게시판</a>
+                </span>
+                <span>한국어 ▽</span><span>KRW 대한민국 원(₩) ▽</span>
                 <span>
                     {% if user.is_authenticated %}
                     <a href="{% url 'logout' %}" style="text-decoration:none;">{{ user.username }} (로그아웃)</a>
